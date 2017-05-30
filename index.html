@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Реле температуры и влажности</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.css" rel="stylesheet">
+    <link href="bootstrap-theme.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+<div class="starter-template container">
+
+    <img src="rele-logo.png" class="img-responsive center-block img-rounded" alt="Responsive image">
+
+    <h1>Настройка реле</h1>
+
+    <p class="lead">
+        Реле температуры и влажности типа ХХХХ предназначено для автоматического
+        включения и отключения по установленной освещенности уличного освещения
+        или мест общего пользования, индивидуальных рабочих мест и т. п., а
+        также для применения в качестве комплектующего изделия в устройствах
+        промышленной автоматики.
+    </p>
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">Текущее чтение с реле</div>
+        <div class="panel-body">
+            <p>Влажность: </p>
+            <div id="read_humidity" class="well">50</div>
+            <p>Температура</p>
+            <div id="read_temperature" class="well">15</div>
+            <button id="read_button" class="btn btn-primary">Обновить</button>
+        </div>
+    </div>
+
+
+    <div class="panel panel-warning">
+        <div class="panel-heading">Текущие настройки реле</div>
+        <div class="panel-body">
+            <p>Включаеть контакт 1 при влажность больше </p>
+            <div id="get_temperature" class="well">50</div>
+            <p>Включать контакт 1 при температуре больше </p>
+            <div id="get_humidity" class="well">15</div>
+            <button id="get_button" class="btn btn-warning">Обновить</button>
+        </div>
+    </div>
+
+    <div class="panel panel-success">
+        <div class="panel-heading">Новые настройки для передачи в реле</div>
+        <div class="panel-body">
+
+        <form action="" method="post" class="form">
+            <div class="form-group">
+                <label for="tempThreshold">Температура (по цельсию)</label>
+                <input id="tempThreshold" type="number" class="form-control"  placeholder="0">
+                <p class="help-block">Температура для включения контакта номер 1</p>
+            </div>
+
+            <div class="form-group">
+                <label for="humidityThreshold">Влажность (0-99)%</label>
+                <input id="humidityThreshold" type="number" class="form-control" placeholder="0">
+                <p class="help-block">Влажность для включения контакта номер 2</p>
+            </div>
+        </form>
+
+            <button id="set_button" class="btn btn-success">Передать в реле</button>
+        </div>
+    </div>
+
+    <address>
+        <strong>ООО "Реле и Автоматика"</strong><br>
+        105187, Москва г., Измайловское <br>
+        шоссе, 73Б, офис 15 <br>
+    </address>
+
+    <address>
+        <a href="http://www.rele.ru">Веб-сайт компании</a><br>
+        <a href="mailto:#">help@rele.ru</a><br>
+        Техническая поддержка: +7(499)1665871
+    </address>
+
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="./bootstrap-native.js"></script>
+<script type="text/javascript" src="./handlers.js"></script>
+</body>
+</html>
