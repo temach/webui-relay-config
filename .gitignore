@@ -11,3 +11,8 @@
 *.ipr
 *.iml
 *.iws
+
+# ignore specific test files in production
+build/get
+build/read
+
